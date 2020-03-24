@@ -72,12 +72,13 @@ ul {
 }
 
 a {
-  color: black;
+  color: var(--grey-text);
   text-decoration: none;
 }
 
 body {
   font-family: "Ruhl", sans-serif;
+  animation: opening 1s ease-in-out;
 }
 
 /* Nav Section */
@@ -112,14 +113,18 @@ nav {
   margin: 0 0 0 auto;
   display: flex;
   flex-wrap: wrap;
+  overflow: hidden;
 }
 
 .hero-introduction p {
+  color: var(--grey-text);
   padding: 5rem 10rem;
+  z-index: 1;
 }
 
 .hero-introduction h2 {
   padding-top: 3rem;
+  z-index: 1;
 }
 
 .hero-introduction a {
@@ -131,17 +136,136 @@ nav {
 .hero-introduction {
   flex: 1 1 40rem;
   text-align: center;
+  position: relative;
 }
 
 .hero-images {
   flex: 1 1 40rem;
   background: linear-gradient(#dad8dd, #dad1d4);
-  position: relative;
+  z-index: 1;
 }
 
 .hero-Aamir {
   width: 100%;
   object-fit: cover;
+  object-position: center;
   /* Needed to make the picture go in the center*/
-  width: 100%;
+  width: 130%;
+}
+
+.diamond {
+  position: absolute;
+  width: 15%;
+  z-index: -1;
+  animation: diamond-fade 2s linear alternate infinite;
+}
+
+.diamond1 {
+  top: 30%;
+  left: 0%;
+}
+.diamond2 {
+  top: 5%;
+  left: 80%;
+}
+.diamond3 {
+  top: 60%;
+  left: 80%;
+}
+
+/* Animations */
+
+@keyframes opening {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes diamond-fade {
+  from {
+    transform: rotateZ(45deg);
+  }
+  to {
+    transform: rotateZ(-45deg);
+  }
+}
+
+.burger,
+.menu-check {
+  display: none;
+}
+
+/* Media Queries */
+@media screen and (max-width: 842px) {
+  .hero {
+    width: 100%;
+  }
+  .hero-introduction p {
+    padding: 5rem 3rem;
+  }
+  /* Burger Menu */
+  .burger {
+    position: relative;
+    display: block;
+  }
+  .burger span {
+    padding: 0.2rem 2rem;
+    background: var(--grey-text);
+    margin: 0.5rem 0rem;
+    display: block;
+    border-radius: 15px;
+    transition: all 0.5s ease;
+  }
+  .nav-links a {
+    text-size: var(--header3);
+    color: white;
+    text-decoration: underline;
+  }
+
+  .nav-links {
+    width: 100%;
+    height: 100%;
+    background: var(--background-color);
+    position: fixed;
+    top: 0;
+    left: 100%;
+    flex-direction: column;
+    align-items: center;
+    transition: transform 1s ease;
+  }
+  .menu-check {
+    position: absolute;
+    top: 50%;
+    right: 5%;
+    transform: translate(5%, -50%);
+    width: 5rem;
+    height: 5rem;
+    cursor: pointer;
+    opacity: 0;
+    z-index: 100;
+    display: block;
+  }
+
+  .menu-check:checked + .nav-links {
+    transform: translateX(-100%);
+  }
+
+  .menu-check:checked ~ .burger span {
+    background: white;
+  }
+
+  .menu-check:checked ~ .burger span:nth-child(1) {
+    transform: rotateZ(45deg) translateY(300%);
+  }
+
+  .menu-check:checked ~ .burger span:nth-child(2) {
+    opacity: 0;
+  }
+
+  .menu-check:checked ~ .burger span:nth-child(3) {
+    transform: rotateZ(-45deg) translateY(-300%);
+  }
 }
