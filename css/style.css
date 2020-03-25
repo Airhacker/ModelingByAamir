@@ -32,6 +32,7 @@ html {
   --special-color: #906272;
   --background-color: #414141;
   --grey-text: #525252;
+  scroll-behavior: smooth;
 }
 h1 {
   font-size: var(--header1);
@@ -356,6 +357,7 @@ footer ul {
   .burger {
     position: relative;
     display: block;
+    cursor: pointer;
   }
   .burger span {
     padding: 0.2rem 2rem;
@@ -387,21 +389,18 @@ footer ul {
     transform: translateX(-100%);
   }
 
-  .toggle,
-  .line2 {
-    opacity: 0;
-  }
-
-  .menu-check:checked ~ .burger span:nth-child(1) {
+  .toggle .line1 {
     transform: rotateZ(45deg) translateY(300%);
+    background: white;
   }
 
-  .menu-check:checked ~ .burger span:nth-child(2) {
+  .toggle .line2 {
     opacity: 0;
   }
 
-  .menu-check:checked ~ .burger span:nth-child(3) {
+  .toggle .line3 {
     transform: rotateZ(-45deg) translateY(-300%);
+    background: white;
   }
 
   /* About Section */
