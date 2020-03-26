@@ -29,7 +29,8 @@ html {
   --header4: calc(2.4rem + 1vw);
   --text: calc(1.5rem + 1vw);
   --big: calc(6rem + 1vw);
-  --special-color: #906272;
+  --special-color: #e95382;
+  --special-color-2: #906272;
   --background-color: #414141;
   --grey-text: #525252;
   scroll-behavior: smooth;
@@ -108,6 +109,10 @@ nav {
   flex: 1 1 20rem;
 }
 
+.nav-links a:hover {
+  color: var(--special-color);
+}
+
 .hero {
   min-height: 90vh;
   width: 95%;
@@ -119,6 +124,7 @@ nav {
 
 .hero-introduction p {
   color: var(--grey-text);
+
   padding: 5rem 10rem;
   z-index: 1;
 }
@@ -132,6 +138,11 @@ nav {
   padding: 2rem 8rem;
   border: 3px solid black;
   margin-bottom: 4rem;
+}
+
+.hero-introduction a:hover {
+  border-color: var(--special-color);
+  color: var(--special-color);
 }
 
 .hero-introduction {
@@ -225,9 +236,8 @@ nav {
   padding: 3rem 8rem;
 }
 
-.about-text h3 {
-  font-family: "Ruhl Medium";
-  padding: 2rem 0rem;
+.about-text p {
+  margin: 3rem 0rem;
 }
 
 .about-text h2 {
@@ -283,7 +293,8 @@ nav {
 }
 
 .form-wrapper {
-  flex: 3 1 40rem;
+  flex: 6 1 40rem;
+  padding: 2rem;
 }
 
 .form-wrapper h2 {
@@ -316,8 +327,12 @@ nav {
   width: 100%;
 }
 
+.form-wrapper button:hover {
+  background: var(--special-color-2);
+}
+
 .contact-image img {
-  flex: 1 1 40rem;
+  flex: 1 1 60rem;
   width: 100%;
   height: 100%;
   object-fit: cover;
