@@ -1,0 +1,133 @@
+@import url("https://fonts.googleapis.com/css2?family=Frank+Ruhl+Libre:wght@300;500&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: "Frank Ruhl Libre", serif;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+li {
+  list-style: none;
+}
+
+#about-page {
+  max-height: 100vh;
+}
+
+#about-page header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 100%;
+  min-height: 10vh;
+}
+
+#about-page footer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: space-around;
+      -ms-flex-align: space-around;
+          align-items: space-around;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  min-height: 5vh;
+}
+
+.hero-image {
+  z-index: -1;
+  position: absolute;
+  opacity: 1;
+  top: 0;
+}
+
+.hero-image img {
+  width: 100vw;
+  height: 100vh;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -webkit-filter: brightness(15%);
+          filter: brightness(15%);
+}
+
+.hero-description {
+  width: 90%;
+  min-height: 85vh;
+  margin: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.hero-description h1 {
+  font-size: 5rem;
+  color: whitesmoke;
+  margin-bottom: 5rem;
+  letter-spacing: 1rem;
+}
+
+.hero-description h3 {
+  font-size: 2rem;
+  color: whitesmoke;
+  margin: 3rem 0rem 1rem 0rem;
+}
+
+.hero-description p {
+  font-size: 2rem;
+  color: whitesmoke;
+  line-height: 2.5rem;
+  font-weight: lighter;
+  margin-bottom: 5rem;
+}
+
+.hero-description a {
+  color: whitesmoke;
+  font-size: 2.5rem;
+  background: #ff69b4;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  padding: 2rem 3rem;
+  border-radius: 20px;
+  cursor: pointer;
+}
+/*# sourceMappingURL=styles.css.map */

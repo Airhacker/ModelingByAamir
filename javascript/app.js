@@ -1,5 +1,5 @@
 // Functionaity for burger menu
-
+/*
 const nav = document.querySelector(".nav-links");
 const burger = document.querySelector(".burger");
 const links = nav.querySelectorAll("a");
@@ -15,3 +15,4 @@ links.forEach(link => {
     burger.classList.toggle("toggle");
   });
 });
+*/
