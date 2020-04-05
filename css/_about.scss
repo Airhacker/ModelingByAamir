@@ -1,0 +1,112 @@
+// Page Settings
+#about-page {
+  overflow: hidden;
+  header {
+    @include flex(row, center, center);
+    width: 90%;
+    margin: auto;
+    min-height: 8vh;
+  }
+
+  main {
+    height: 84vh;
+    @include flex(column, center, flex-start);
+  }
+}
+
+// Header Element
+.logo {
+  flex: 1 1 20rem;
+  font-family: "Great Vibes", cursive;
+  font-size: 2.5rem;
+  text-align: left;
+  color: whitesmoke;
+}
+.menu {
+  flex: 1 1 20rem;
+  font-size: 1.5rem;
+
+  ul {
+    @include flex(row, center, space-around);
+  }
+
+  a {
+    transition: 0.5s ease;
+    border-bottom: 3px solid transparent;
+    color: whitesmoke;
+
+    &:hover {
+      color: $special-color;
+      border-bottom: 3px solid $special-color;
+      width: 200px;
+    }
+  }
+}
+
+// Main Element
+
+.hero-image {
+  z-index: -1;
+  top: 0;
+  position: absolute;
+  img {
+    height: 100vh;
+    width: 100%;
+    object-fit: cover;
+    filter: brightness(15%);
+  }
+}
+
+.hero-description {
+  width: 90%;
+  margin: auto;
+  color: whitesmoke;
+
+  h3 {
+    font-size: 2rem;
+    font-weight: lighter;
+  }
+
+  h1 {
+    font-size: 5rem;
+    letter-spacing: 1rem;
+  }
+
+  p {
+    font-size: 2rem;
+    font-weight: lighter;
+    line-height: 3rem;
+    margin-top: 3rem;
+  }
+}
+
+.work-btn {
+  color: whitesmoke;
+  font-size: 2rem;
+  align-self: center;
+  background: $special-color;
+  padding: 2rem 3rem;
+  transition: 0.5s ease;
+
+  &:hover {
+    border-radius: 25px;
+    background: $hover-color;
+  }
+}
+
+// Footer Element
+
+.about-footer {
+  @include flex(row, center, center);
+  min-height: 8vh;
+  width: 90%;
+  margin: auto;
+}
+
+.copyright-info {
+  height: 100%;
+  flex: 1 1 20rem;
+  justify-self: flex-start;
+  color: whitesmoke;
+  font-size: 1.25rem;
+}

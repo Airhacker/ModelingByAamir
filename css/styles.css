@@ -25,7 +25,7 @@ li {
 }
 
 #about-page {
-  max-height: 100vh;
+  overflow: hidden;
 }
 
 #about-page header {
@@ -42,11 +42,46 @@ li {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  width: 100%;
-  min-height: 10vh;
+  width: 90%;
+  margin: auto;
+  min-height: 8vh;
 }
 
-#about-page footer {
+#about-page main {
+  height: 84vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+}
+
+.logo {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 20rem;
+          flex: 1 1 20rem;
+  font-family: "Great Vibes", cursive;
+  font-size: 2.5rem;
+  text-align: left;
+  color: whitesmoke;
+}
+
+.menu {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 20rem;
+          flex: 1 1 20rem;
+  font-size: 1.5rem;
+}
+
+.menu ul {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -54,25 +89,35 @@ li {
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
-  -webkit-box-align: space-around;
-      -ms-flex-align: space-around;
-          align-items: space-around;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  min-height: 5vh;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+.menu a {
+  -webkit-transition: 0.5s ease;
+  transition: 0.5s ease;
+  border-bottom: 3px solid transparent;
+  color: whitesmoke;
+}
+
+.menu a:hover {
+  color: #ff69b4;
+  border-bottom: 3px solid #ff69b4;
+  width: 200px;
 }
 
 .hero-image {
   z-index: -1;
-  position: absolute;
-  opacity: 1;
   top: 0;
+  position: absolute;
 }
 
 .hero-image img {
-  width: 100vw;
   height: 100vh;
+  width: 100%;
   -o-object-fit: cover;
      object-fit: cover;
   -webkit-filter: brightness(15%);
@@ -81,53 +126,70 @@ li {
 
 .hero-description {
   width: 90%;
-  min-height: 85vh;
   margin: auto;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-align: start;
-      -ms-flex-align: start;
-          align-items: flex-start;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-}
-
-.hero-description h1 {
-  font-size: 5rem;
   color: whitesmoke;
-  margin-bottom: 5rem;
-  letter-spacing: 1rem;
 }
 
 .hero-description h3 {
   font-size: 2rem;
-  color: whitesmoke;
-  margin: 3rem 0rem 1rem 0rem;
+  font-weight: lighter;
+}
+
+.hero-description h1 {
+  font-size: 5rem;
+  letter-spacing: 1rem;
 }
 
 .hero-description p {
   font-size: 2rem;
-  color: whitesmoke;
-  line-height: 2.5rem;
   font-weight: lighter;
-  margin-bottom: 5rem;
+  line-height: 3rem;
+  margin-top: 3rem;
 }
 
-.hero-description a {
+.work-btn {
   color: whitesmoke;
-  font-size: 2.5rem;
-  background: #ff69b4;
+  font-size: 2rem;
   -ms-flex-item-align: center;
       -ms-grid-row-align: center;
       align-self: center;
+  background: #ff69b4;
   padding: 2rem 3rem;
-  border-radius: 20px;
-  cursor: pointer;
+  -webkit-transition: 0.5s ease;
+  transition: 0.5s ease;
+}
+
+.work-btn:hover {
+  border-radius: 25px;
+  background: #ff0090;
+}
+
+.about-footer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  min-height: 8vh;
+  width: 90%;
+  margin: auto;
+}
+
+.copyright-info {
+  height: 100%;
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 20rem;
+          flex: 1 1 20rem;
+  justify-self: flex-start;
+  color: whitesmoke;
+  font-size: 1.25rem;
 }
 /*# sourceMappingURL=styles.css.map */
