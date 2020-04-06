@@ -91,12 +91,13 @@ li {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
 }
 
 .contact-btn {
+  font-family: "Frank Ruhl Libre", serif;
   font-size: 1.5rem;
   -webkit-transition: 0.5s ease;
   transition: 0.5s ease;
@@ -104,6 +105,7 @@ li {
   border: none;
   border-bottom: 3px solid transparent;
   color: whitesmoke;
+  cursor: pointer;
 }
 
 .contact-btn:hover {
@@ -127,6 +129,19 @@ li {
 }
 
 .hero-description {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   width: 90%;
   margin: auto;
   color: whitesmoke;
@@ -150,17 +165,22 @@ li {
 }
 
 .work-btn {
+  position: relative;
+  font-family: "Frank Ruhl Libre", serif;
+  letter-spacing: 0.5rem;
   color: whitesmoke;
   font-size: 2rem;
   font-weight: bold;
-  -ms-flex-item-align: center;
-      -ms-grid-row-align: center;
-      align-self: center;
   background: #ff69b4;
   padding: 2rem 3rem;
   -webkit-transition: 0.5s ease;
   transition: 0.5s ease;
   border: none;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  margin: 1.5rem;
+  cursor: pointer;
 }
 
 .work-btn:hover {
@@ -197,6 +217,105 @@ li {
   font-size: 1.25rem;
 }
 
+@media screen and (min-width: 750px) {
+  .logo {
+    font-size: 5rem;
+  }
+  .contact-btn {
+    font-size: 3rem;
+  }
+  .hero-description h3 {
+    font-size: 4rem;
+  }
+  .hero-description h1 {
+    font-size: 8rem;
+  }
+  .hero-description p {
+    font-size: 3rem;
+    line-height: 4rem;
+  }
+  .work-btn {
+    font-size: 3rem;
+  }
+  .copyright-info {
+    font-size: 2rem;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  #about-page header {
+    width: 95%;
+    margin: auto;
+  }
+  #about-page main {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
+  .logo {
+    font-size: 6rem;
+    color: black;
+    -ms-grid-column-align: center;
+        justify-self: center;
+  }
+  .contact-btn {
+    font-size: 4rem;
+  }
+  .hero-image {
+    -webkit-box-flex: 1;
+        -ms-flex: 1 1 40rem;
+            flex: 1 1 40rem;
+    z-index: -1;
+    position: static;
+  }
+  .hero-image img {
+    height: 100%;
+    width: 100%;
+    -webkit-transform: translateY(6%);
+            transform: translateY(6%);
+    -webkit-filter: brightness(100%);
+            filter: brightness(100%);
+  }
+  .hero-description {
+    -webkit-box-flex: 1;
+        -ms-flex: 1 1 40rem;
+            flex: 1 1 40rem;
+    margin: 5rem;
+  }
+  .hero-description h3 {
+    font-size: 5rem;
+    font-weight: lighter;
+  }
+  .hero-description h1 {
+    font-size: 10rem;
+    letter-spacing: 1rem;
+  }
+  .hero-description p {
+    font-size: 3rem;
+    font-weight: lighter;
+    line-height: 4rem;
+    margin-top: 3rem;
+  }
+  .work-btn {
+    letter-spacing: 0.25rem;
+    font-size: 3rem;
+    -ms-flex-item-align: start;
+        align-self: flex-start;
+    margin: 5rem 0rem;
+  }
+  .about-footer {
+    width: 95%;
+  }
+  .copyright-info {
+    -ms-flex-item-align: center;
+        -ms-grid-row-align: center;
+        align-self: center;
+    color: black;
+    font-size: 2rem;
+  }
+}
+
 #work-page {
   background: #353333;
 }
@@ -218,6 +337,8 @@ li {
   min-height: 20vh;
   width: 100%;
   position: relative;
+  border-bottom: 3px whitesmoke solid;
+  margin-bottom: 6rem;
 }
 
 .work-heading h1 {
@@ -239,6 +360,7 @@ li {
   border-radius: 25px;
   -webkit-transition: 0.5s ease;
   transition: 0.5s ease;
+  cursor: pointer;
 }
 
 #close-btn:hover {
@@ -271,6 +393,120 @@ li {
 .image-gallery img {
   width: 100%;
   margin: 1rem 0rem;
+  pointer-events: none;
+}
+
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 3;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.9);
+}
+
+.modal-content {
+  margin: auto;
+  width: 80%;
+  max-width: 1200px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -webkit-animation: zoom 0.6 ease;
+          animation: zoom 0.6 ease;
+}
+
+@-webkit-keyframes zoom {
+  from {
+    -webkit-transform: scale(0);
+            transform: scale(0);
+  }
+  to {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+}
+
+@keyframes zoom {
+  from {
+    -webkit-transform: scale(0);
+            transform: scale(0);
+  }
+  to {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+}
+
+#modal-close-btn {
+  position: absolute;
+  top: 6%;
+  right: 3%;
+  background: none;
+  border: whitesmoke 2px solid;
+  color: whitesmoke;
+  padding: 1rem;
+  border-radius: 0px;
+  border-radius: 25px;
+  -webkit-transition: 0.5s ease;
+  transition: 0.5s ease;
+  cursor: pointer;
+}
+
+#modal-close-btn:hover {
+  border: #ff69b4 2px solid;
+}
+
+#modal-close-btn:focus {
+  background: #ff0090;
+  border: #ff0090 2px solid;
+}
+
+@media screen and (min-width: 750px) {
+  .work-heading {
+    width: 90%;
+    margin: auto;
+    margin-bottom: 6rem;
+  }
+  .work-heading h1 {
+    font-size: 8rem;
+  }
+  #close-btn {
+    padding: 1rem;
+    font-size: 2rem;
+  }
+  .image-gallery {
+    display: -ms-grid;
+    display: grid;
+    gap: 1.5rem 1.5rem;
+    -ms-grid-columns: 50% 50%;
+        grid-template-columns: 50% 50%;
+    width: 90%;
+    margin: auto;
+  }
+  .image-gallery img {
+    width: 100%;
+    min-height: 40vh;
+    max-height: 40vh;
+    margin: 0rem;
+    -o-object-fit: cover;
+       object-fit: cover;
+    cursor: pointer;
+    pointer-events: all;
+  }
+  .image-gallery img:hover {
+    -webkit-filter: brightness(50%);
+            filter: brightness(50%);
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .image-gallery {
+    gap: 2rem 2rem;
+    -ms-grid-columns: 20% 20% 20% 20%;
+        grid-template-columns: 20% 20% 20% 20%;
+  }
 }
 
 #contact-page {
@@ -395,5 +631,52 @@ li {
 #contact-close-btn:focus {
   background: #ff0090;
   border: #ff0090 2px solid;
+}
+
+@media screen and (min-width: 750px) {
+  #contact-page form {
+    width: 80%;
+  }
+  #contact-page input {
+    margin: 2rem;
+    padding: 2rem 0rem;
+    font-size: 3rem;
+  }
+  #contact-page #submit-btn {
+    margin: 5rem 0rem;
+    letter-spacing: 0.75rem;
+  }
+  .contact-heading h1 {
+    font-size: 8rem;
+  }
+  .contact-heading span {
+    font-size: 12rem;
+  }
+  #contact-close-btn {
+    padding: 1rem;
+    font-size: 2rem;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  #contact-page form {
+    width: 50%;
+  }
+  #contact-page #submit-btn {
+    max-width: 50%;
+  }
+  .contact-heading {
+    text-align: center;
+  }
+  .contact-heading h1 {
+    font-size: 8rem;
+  }
+  .contact-heading span {
+    font-size: 12rem;
+  }
+  #contact-close-btn {
+    padding: 1rem;
+    font-size: 2rem;
+  }
 }
 /*# sourceMappingURL=styles.css.map */

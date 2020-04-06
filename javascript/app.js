@@ -102,3 +102,8 @@ contactClose.addEventListener("click", () => {
     x: window.innerHeight,
   });
 });
+
+// Image Modal
+
+const modal = document.querySelector(".modal");
+const image = document.querySelectorAll(".gallery-image");

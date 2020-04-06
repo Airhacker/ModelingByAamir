@@ -82,3 +82,71 @@
     border: $hover-color 2px solid;
   }
 }
+
+// Tablet Responsiveness
+
+@media screen and (min-width: 750px) {
+  #contact-page {
+    form {
+      width: 80%;
+    }
+
+    input {
+      margin: 2rem;
+      padding: 2rem 0rem;
+      font-size: 3rem;
+    }
+
+    #submit-btn {
+      margin: 5rem 0rem;
+      letter-spacing: 0.75rem;
+    }
+  }
+
+  .contact-heading {
+    h1 {
+      font-size: 8rem;
+    }
+
+    span {
+      font-size: 12rem;
+    }
+  }
+
+  // Close Button
+  #contact-close-btn {
+    padding: 1rem;
+    font-size: 2rem;
+  }
+}
+
+// Desktop Responsiveness
+
+@media screen and (min-width: 1200px) {
+  #contact-page {
+    form {
+      width: 50%;
+    }
+
+    #submit-btn {
+      max-width: 50%;
+    }
+  }
+
+  .contact-heading {
+    text-align: center;
+    h1 {
+      font-size: 8rem;
+    }
+
+    span {
+      font-size: 12rem;
+    }
+  }
+
+  // Close Button
+  #contact-close-btn {
+    padding: 1rem;
+    font-size: 2rem;
+  }
+}
