@@ -309,6 +309,9 @@ li {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 40rem;
+          flex: 1 1 40rem;
   width: 100%;
 }
 
@@ -373,8 +376,8 @@ li {
 
 #contact-close-btn {
   position: absolute;
-  top: 3%;
-  right: 6%;
+  top: 8%;
+  right: 0%;
   background: none;
   border: whitesmoke 2px solid;
   color: whitesmoke;

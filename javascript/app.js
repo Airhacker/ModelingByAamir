@@ -21,6 +21,7 @@ links.forEach(link => {
 
 const workBtn = document.querySelector(".work-btn");
 const closeBtn = document.querySelector("#close-btn");
+
 const body = document.querySelector("body");
 
 let tl = gsap.timeline();
@@ -74,6 +75,7 @@ closeBtn.addEventListener("click", () => {
 // Contact Page
 
 const contactBtn = document.querySelector(".contact-btn");
+const contactClose = document.querySelector("#contact-close-btn");
 
 // Contact Button
 contactBtn.addEventListener("click", () => {
@@ -81,5 +83,22 @@ contactBtn.addEventListener("click", () => {
     duration: 1,
     opacity: 1,
     x: -window.innerWidth,
-  }).fromTo("");
+  })
+    .from(".contact-heading", {
+      y: -window.innerHeight,
+      ease: "ease",
+    })
+    .from("form", {
+      y: window.innerHeight,
+      ease: "ease",
+    });
+});
+
+// Contact Close Button
+
+contactClose.addEventListener("click", () => {
+  tl.to("#contact-page", {
+    duration: 1,
+    x: window.innerHeight,
+  });
 });

@@ -11,6 +11,7 @@
 
   form {
     @include flex(column, center, center);
+    flex: 1 1 40rem;
     width: 100%;
   }
 
@@ -62,8 +63,8 @@
 // Close Button
 #contact-close-btn {
   position: absolute;
-  top: 3%;
-  right: 6%;
+  top: 8%;
+  right: 0%;
   background: none;
   border: whitesmoke 2px solid;
   color: whitesmoke;
