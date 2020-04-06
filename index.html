@@ -20,11 +20,7 @@
           <span>Aamir Durvesh</span>
         </div>
         <div class="menu">
-          <ul>
-            <li><a href="#about-page">About</a></li>
-            <li><a href="#work-page">My Work</a></li>
-            <li><a href="#contact-page">Contact</a></li>
-          </ul>
+          <button class="contact-btn">Contact Me</button>
         </div>
       </header>
       <main>
@@ -44,7 +40,7 @@
             industry.
           </p>
         </div>
-        <a class="work-btn" href="#work-page">View my work</a>
+        <button class="work-btn">View my work</button>
       </main>
 
       <footer class="about-footer">
@@ -52,7 +48,7 @@
           <p>Aamir Durvesh &copy; 2020</p>
         </div>
 
-        <a href="#"
+        <a href="https://www.instagram.com/itisaamir/" target="_blank"
           ><svg
             width="26"
             height="27"
@@ -89,6 +85,33 @@
       </footer>
     </section>
 
+    <section id="work-page">
+      <div class="work-heading">
+        <h1>My Work</h1>
+        <button id="close-btn">Close</button>
+      </div>
+      <div class="image-gallery">
+        <img src="./images/gallery1.JPG" alt="" />
+        <img src="./images/gallery2.JPG" alt="" />
+        <img src="./images/gallery3.JPG" alt="" />
+        <img src="./images/gallery4.JPG" alt="" />
+        <img src="./images/about.JPG" alt="" />
+      </div>
+    </section>
+
+    <section id="contact-page">
+      <div class="contact-heading">
+        <h1>Get in <span>touch.</span></h1>
+        <button id="contact-close-btn">Close</button>
+      </div>
+      <form>
+        <input type="text" placeholder="Your Name" required />
+        <input type="email" placeholder="Your Email" required />
+        <input type="submit" id="submit-btn" />
+      </form>
+    </section>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.2.4/gsap.min.js"></script>
     <script src="./javascript/app.js"></script>
   </body>
 </html>

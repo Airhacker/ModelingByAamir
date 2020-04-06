@@ -1,6 +1,7 @@
 // Page Settings
 #about-page {
   overflow: hidden;
+
   header {
     @include flex(row, center, center);
     width: 90%;
@@ -24,22 +25,20 @@
 }
 .menu {
   flex: 1 1 20rem;
+  @include flex(row, center, center);
+}
+
+.contact-btn {
   font-size: 1.5rem;
+  transition: 0.5s ease;
+  background: none;
+  border: none;
+  border-bottom: 3px solid transparent;
+  color: whitesmoke;
 
-  ul {
-    @include flex(row, center, space-around);
-  }
-
-  a {
-    transition: 0.5s ease;
-    border-bottom: 3px solid transparent;
-    color: whitesmoke;
-
-    &:hover {
-      color: $special-color;
-      border-bottom: 3px solid $special-color;
-      width: 200px;
-    }
+  &:hover {
+    color: $special-color;
+    border-bottom: 3px solid $special-color;
   }
 }
 
@@ -83,10 +82,12 @@
 .work-btn {
   color: whitesmoke;
   font-size: 2rem;
+  font-weight: bold;
   align-self: center;
   background: $special-color;
   padding: 2rem 3rem;
   transition: 0.5s ease;
+  border: none;
 
   &:hover {
     border-radius: 25px;

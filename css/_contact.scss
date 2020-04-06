@@ -1,0 +1,83 @@
+#contact-page {
+  position: fixed;
+  top: 0;
+  left: 100%;
+  min-height: 100vh;
+  width: 100%;
+
+  background: #353333;
+
+  @include flex(column, center, center);
+
+  form {
+    @include flex(column, center, center);
+    width: 100%;
+  }
+
+  input {
+    margin: 1rem;
+    min-width: 80%;
+    padding: 1rem 0rem;
+    font-size: 2rem;
+    color: whitesmoke;
+    background: none;
+    border: none;
+    border-bottom: whitesmoke 3px solid;
+  }
+
+  #submit-btn {
+    background: $special-color;
+    border: none;
+    margin: 3rem 0rem;
+    font-weight: bold;
+    letter-spacing: 0.4rem;
+    border-radius: 0px;
+    transition: 0.5s ease;
+
+    &:hover {
+      background: $hover-color;
+      border-radius: 25px;
+    }
+  }
+}
+
+.contact-heading {
+  width: 80%;
+  margin: auto;
+  flex: 1 1 40rem;
+  @include flex(column, center, center);
+
+  h1 {
+    color: whitesmoke;
+    font-size: 5rem;
+    width: 80%;
+  }
+
+  span {
+    color: $special-color;
+    font-size: 8rem;
+  }
+}
+
+// Close Button
+#contact-close-btn {
+  position: absolute;
+  top: 3%;
+  right: 6%;
+  background: none;
+  border: whitesmoke 2px solid;
+  color: whitesmoke;
+  padding: 1rem;
+  border-radius: 0px;
+  border-radius: 25px;
+  transition: 0.5s ease;
+
+  &:hover {
+    border: $special-color 2px solid;
+  }
+
+  &:focus {
+    background: $hover-color;
+    border: $hover-color 2px solid;
+  }
+}

@@ -13,6 +13,9 @@ html {
 
 body {
   font-family: "Frank Ruhl Libre", serif;
+  max-height: 100vh;
+  background: #353333;
+  overflow: hidden;
 }
 
 a {
@@ -78,10 +81,6 @@ li {
   -webkit-box-flex: 1;
       -ms-flex: 1 1 20rem;
           flex: 1 1 20rem;
-  font-size: 1.5rem;
-}
-
-.menu ul {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -92,21 +91,24 @@ li {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
-.menu a {
+.contact-btn {
+  font-size: 1.5rem;
   -webkit-transition: 0.5s ease;
   transition: 0.5s ease;
+  background: none;
+  border: none;
   border-bottom: 3px solid transparent;
   color: whitesmoke;
 }
 
-.menu a:hover {
+.contact-btn:hover {
   color: #ff69b4;
   border-bottom: 3px solid #ff69b4;
-  width: 200px;
 }
 
 .hero-image {
@@ -150,6 +152,7 @@ li {
 .work-btn {
   color: whitesmoke;
   font-size: 2rem;
+  font-weight: bold;
   -ms-flex-item-align: center;
       -ms-grid-row-align: center;
       align-self: center;
@@ -157,6 +160,7 @@ li {
   padding: 2rem 3rem;
   -webkit-transition: 0.5s ease;
   transition: 0.5s ease;
+  border: none;
 }
 
 .work-btn:hover {
@@ -191,5 +195,202 @@ li {
   justify-self: flex-start;
   color: whitesmoke;
   font-size: 1.25rem;
+}
+
+#work-page {
+  background: #353333;
+}
+
+.work-heading {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  min-height: 20vh;
+  width: 100%;
+  position: relative;
+}
+
+.work-heading h1 {
+  font-size: 5rem;
+  text-align: center;
+  font-family: "Great Vibes", cursive;
+  color: whitesmoke;
+}
+
+#close-btn {
+  position: absolute;
+  top: 6%;
+  right: 3%;
+  background: none;
+  border: whitesmoke 2px solid;
+  color: whitesmoke;
+  padding: 1rem;
+  border-radius: 0px;
+  border-radius: 25px;
+  -webkit-transition: 0.5s ease;
+  transition: 0.5s ease;
+}
+
+#close-btn:hover {
+  border: #ff69b4 2px solid;
+}
+
+#close-btn:focus {
+  background: #ff0090;
+  border: #ff0090 2px solid;
+}
+
+.image-gallery {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 90%;
+  margin: auto;
+}
+
+.image-gallery img {
+  width: 100%;
+  margin: 1rem 0rem;
+}
+
+#contact-page {
+  position: fixed;
+  top: 0;
+  left: 100%;
+  min-height: 100vh;
+  width: 100%;
+  background: #353333;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+#contact-page form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 100%;
+}
+
+#contact-page input {
+  margin: 1rem;
+  min-width: 80%;
+  padding: 1rem 0rem;
+  font-size: 2rem;
+  color: whitesmoke;
+  background: none;
+  border: none;
+  border-bottom: whitesmoke 3px solid;
+}
+
+#contact-page #submit-btn {
+  background: #ff69b4;
+  border: none;
+  margin: 3rem 0rem;
+  font-weight: bold;
+  letter-spacing: 0.4rem;
+  border-radius: 0px;
+  -webkit-transition: 0.5s ease;
+  transition: 0.5s ease;
+}
+
+#contact-page #submit-btn:hover {
+  background: #ff0090;
+  border-radius: 25px;
+}
+
+.contact-heading {
+  width: 80%;
+  margin: auto;
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 40rem;
+          flex: 1 1 40rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.contact-heading h1 {
+  color: whitesmoke;
+  font-size: 5rem;
+  width: 80%;
+}
+
+.contact-heading span {
+  color: #ff69b4;
+  font-size: 8rem;
+}
+
+#contact-close-btn {
+  position: absolute;
+  top: 3%;
+  right: 6%;
+  background: none;
+  border: whitesmoke 2px solid;
+  color: whitesmoke;
+  padding: 1rem;
+  border-radius: 0px;
+  border-radius: 25px;
+  -webkit-transition: 0.5s ease;
+  transition: 0.5s ease;
+}
+
+#contact-close-btn:hover {
+  border: #ff69b4 2px solid;
+}
+
+#contact-close-btn:focus {
+  background: #ff0090;
+  border: #ff0090 2px solid;
 }
 /*# sourceMappingURL=styles.css.map */
