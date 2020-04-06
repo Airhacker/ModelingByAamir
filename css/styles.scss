@@ -1,0 +1,22 @@
+// Font Imports
+@import url("https://fonts.googleapis.com/css2?family=Frank+Ruhl+Libre:wght@300;500&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap");
+// Variables
+$special-color: #ff69b4;
+$text-color: #c4c4c4;
+$hover-color: #ff0090;
+
+// Mixins
+@mixin flex($direction, $align, $justify) {
+  display: flex;
+  flex-direction: $direction;
+  align-items: $align;
+  justify-content: $justify;
+}
+
+// Imports
+
+@import "global";
+@import "about";
+@import "work";
+@import "contact";

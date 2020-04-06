@@ -1,0 +1,241 @@
+// Page Settings
+#about-page {
+  overflow: hidden;
+
+  header {
+    @include flex(row, center, center);
+    width: 90%;
+    margin: auto;
+    min-height: 8vh;
+  }
+
+  main {
+    height: 84vh;
+    @include flex(column, center, flex-start);
+  }
+}
+
+// Header Element
+.logo {
+  flex: 1 1 20rem;
+  font-family: "Great Vibes", cursive;
+  font-size: 2.5rem;
+  text-align: left;
+  color: whitesmoke;
+}
+.menu {
+  flex: 1 1 20rem;
+  @include flex(row, center, flex-end);
+}
+
+.contact-btn {
+  font-family: "Frank Ruhl Libre", serif;
+  font-size: 1.5rem;
+  transition: 0.5s ease;
+  background: none;
+  border: none;
+  border-bottom: 3px solid transparent;
+  color: whitesmoke;
+  cursor: pointer;
+
+  &:hover {
+    color: $special-color;
+    border-bottom: 3px solid $special-color;
+  }
+}
+
+// Main Element
+
+.hero-image {
+  z-index: -1;
+  top: 0;
+  position: absolute;
+  img {
+    height: 100vh;
+    width: 100%;
+    object-fit: cover;
+    filter: brightness(15%);
+  }
+}
+
+.hero-description {
+  @include flex(column, flex-start, center) width: 90%;
+  margin: auto;
+  color: whitesmoke;
+
+  h3 {
+    font-size: 2rem;
+    font-weight: lighter;
+  }
+
+  h1 {
+    font-size: 5rem;
+    letter-spacing: 1rem;
+  }
+
+  p {
+    font-size: 2rem;
+    font-weight: lighter;
+    line-height: 3rem;
+    margin-top: 3rem;
+  }
+}
+
+.work-btn {
+  position: relative;
+  font-family: "Frank Ruhl Libre", serif;
+  letter-spacing: 0.5rem;
+  color: whitesmoke;
+  font-size: 2rem;
+  font-weight: bold;
+  background: $special-color;
+  padding: 2rem 3rem;
+  transition: 0.5s ease;
+  border: none;
+  align-self: center;
+  margin: 1.5rem;
+  cursor: pointer;
+
+  &:hover {
+    border-radius: 25px;
+    background: $hover-color;
+  }
+}
+
+// Footer Element
+
+.about-footer {
+  @include flex(row, center, center);
+  min-height: 8vh;
+  width: 90%;
+  margin: auto;
+}
+
+.copyright-info {
+  height: 100%;
+  flex: 1 1 20rem;
+  justify-self: flex-start;
+  color: whitesmoke;
+  font-size: 1.25rem;
+}
+
+// Tablet Responsiveness
+
+@media screen and (min-width: 750px) {
+  // Header Element
+  .logo {
+    font-size: 5rem;
+  }
+
+  .contact-btn {
+    font-size: 3rem;
+  }
+
+  // Main Element
+
+  .hero-description {
+    h3 {
+      font-size: 4rem;
+    }
+
+    h1 {
+      font-size: 8rem;
+    }
+
+    p {
+      font-size: 3rem;
+      line-height: 4rem;
+    }
+  }
+
+  .work-btn {
+    font-size: 3rem;
+  }
+
+  // Footer Element
+
+  .copyright-info {
+    font-size: 2rem;
+  }
+}
+
+// Desktop Responsiveness
+
+@media screen and (min-width: 1200px) {
+  #about-page {
+    header {
+      width: 95%;
+      margin: auto;
+    }
+
+    main {
+      flex-direction: row;
+    }
+  }
+
+  // Header Element
+  .logo {
+    font-size: 6rem;
+    color: black;
+    justify-self: center;
+  }
+
+  .contact-btn {
+    font-size: 4rem;
+  }
+
+  // Main Element
+
+  .hero-image {
+    flex: 1 1 40rem;
+    z-index: -1;
+    position: static;
+    img {
+      height: 100%;
+      width: 100%;
+      transform: translateY(6%);
+      filter: brightness(100%);
+    }
+  }
+
+  .hero-description {
+    flex: 1 1 40rem;
+    margin: 5rem;
+
+    h3 {
+      font-size: 5rem;
+      font-weight: lighter;
+    }
+
+    h1 {
+      font-size: 10rem;
+      letter-spacing: 1rem;
+    }
+
+    p {
+      font-size: 3rem;
+      font-weight: lighter;
+      line-height: 4rem;
+      margin-top: 3rem;
+    }
+  }
+
+  .work-btn {
+    letter-spacing: 0.25rem;
+    font-size: 3rem;
+    align-self: flex-start;
+    margin: 5rem 0rem;
+  }
+
+  // Footer Element
+
+  .about-footer {
+    width: 95%;
+  }
+
+  .copyright-info {
+    align-self: center;
+    color: black;
+    font-size: 2rem;
+  }
+}
